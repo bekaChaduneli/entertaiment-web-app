@@ -10,20 +10,20 @@
 
 ### Screenshot
 
-![](/preview.png)
+![](/preview.jpg)
 
 ### Links
 
-- Live Site URL: [Live site](https://entertaiment-web-app-react.web.app/)
-- Solution URL: [Solution URL](https://github.com/bekaChaduneli/entertaiment-web-app-react)
+- Live Site URL: [Live site](https://planet-facts-reacts.vercel.app/)
+- Solution URL: [Solution URL](https://github.com/bekaChaduneli/planet-facts-react)
 
 ### Built with
 
-- REACT
+- React
+- Styled Components
 - Typescript
 - React Router
-- Splide
-- Styled Components
+- Vite
 
 ## Author
 
