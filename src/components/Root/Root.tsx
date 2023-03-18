@@ -2,12 +2,12 @@ import { Link, Outlet } from "react-router-dom";
 import Movies from "../Movies/Movies";
 import Series from "../Series/Series";
 import Bookmarks from "../Bookmarks/Bookmarks";
-import movie from "../../assets/icon-nav-movies.svg";
-import serie from "../../assets/icon-nav-tv-series.svg";
-import bookmark from "../../assets/icon-nav-bookmark.svg";
-import image from "../../assets/logo.svg";
-import home from "../../assets/icon-nav-home.svg";
-import avatar from "../../assets/image-avatar.png";
+import movie from "../../../public/assets/icon-nav-movies.svg";
+import serie from "../../../public/assets/icon-nav-tv-series.svg";
+import bookmark from "../../../public/assets/icon-nav-bookmark.svg";
+import image from "../../../public/assets/logo.svg";
+import home from "../../../public/assets/icon-nav-home.svg";
+import avatar from "../../../public/assets/image-avatar.png";
 import { Content, Header, Img, MainBoxs, MainImg, Person } from "./Root.styled";
 import { useState } from "react";
 export default function Roots(props: any) {

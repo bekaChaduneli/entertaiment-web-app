@@ -1,8 +1,8 @@
-import BookmarkEmpty from "../../assets/icon-bookmark-empty.svg";
-import BookmarkFull from "../../assets/icon-bookmark-full.svg";
-import movieImg from "../../assets/icon-category-movie.svg";
-import seriesImg from "../../assets/icon-category-tv.svg";
-import search from "../../assets/icon-search.svg";
+import BookmarkEmpty from "../../../public/assets/icon-bookmark-empty.svg";
+import BookmarkFull from "../../../public/assets/icon-bookmark-full.svg";
+import movieImg from "../../../public/assets/icon-category-movie.svg";
+import seriesImg from "../../../public/../public/assets/icon-category-tv.svg";
+import search from "../../../public/assets/icon-search.svg";
 import {
   Bookmark,
   Box,
@@ -31,7 +31,7 @@ import {
 } from "./Bookmarks.styled";
 import { useState } from "react";
 import Input from "../Search/Input";
-import play from "../../assets/icon-play.svg";
+import play from "../../../public/assets/icon-play.svg";
 export default function Series(props: any) {
   const [bookmark, setBookmark] = useState(false);
   const [isSearching, setIsSearching] = useState(false);

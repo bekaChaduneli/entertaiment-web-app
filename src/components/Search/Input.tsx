@@ -1,6 +1,6 @@
 import { useState } from "react";
-import BookmarkEmpty from "../../assets/icon-bookmark-empty.svg";
-import BookmarkFull from "../../assets/icon-bookmark-full.svg";
+import BookmarkEmpty from "../../../public/assets/icon-bookmark-empty.svg";
+import BookmarkFull from "../../../public/assets/icon-bookmark-full.svg";
 import {
   Bookmark,
   Box,
@@ -20,7 +20,7 @@ import {
   Search,
   SearchImg,
 } from "./Input.styled";
-import searche from "../../assets/icon-search.svg";
+import searche from "../../../public/assets/icon-search.svg";
 export default function Input(props: any) {
   console.log(props.data);
   const [searchValue, setSearchValue] = useState("");
