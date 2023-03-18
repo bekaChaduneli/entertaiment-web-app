@@ -15,11 +15,85 @@ export const MainBox = styled.main`
   }
 `;
 
+export const HoverBox = styled.div`
+  width: 85px;
+  height: 30px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 28.5px;
+  position: absolute;
+  transition: 0.5s;
+  align-self: center;
+  justify-self: center;
+  margin-top: 41px;
+  gap: 19px;
+  opacity: 25%;
+  background-color: ${({ theme }) => theme.white};
+  @media screen and (min-width: 768px) {
+    width: 100px;
+    height: 40px;
+    margin-top: 54px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 117px;
+    height: 48px;
+    margin-top: 60px;
+  }
+`;
+
+export const HoverCont = styled.div`
+  display: none;
+  gap: 8px;
+  position: absolute;
+  align-self: center;
+  align-items: center;
+  transition: 0.5s;
+  justify-self: center;
+  margin-top: 47px;
+  @media screen and (min-width: 768px) {
+    gap: 12px;
+    margin-top: 63px;
+  }
+  @media screen and (min-width: 1440px) {
+    gap: 19px;
+    margin-top: 70px;
+  }
+`;
+
+export const HoverImg = styled.img`
+  width: 18px;
+  height: 18px;
+  @media screen and (min-width: 768px) {
+    width: 22px;
+    height: 22px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 30px;
+    height: 30px;
+  }
+`;
+export const HoverTxt = styled.span`
+  font-size: 14px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 18px;
+  }
+`;
+
 export const Box = styled.div`
   width: 164px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  &:hover div {
+    display: flex;
+  }
+  &:hover img {
+    opacity: 50%;
+  }
   @media screen and (min-width: 768px) {
     width: 220px;
   }
@@ -56,6 +130,11 @@ export const RecomemendedTxt = styled.p`
   font-size: 20px;
   letter-spacing: -0.31px;
   line-height: 25.2px;
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+    line-height: 40.32px;
+  }
 `;
 
 export const Recommended = styled.div`

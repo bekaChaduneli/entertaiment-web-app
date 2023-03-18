@@ -29,9 +29,18 @@ import {
   TrandingName,
   Headline,
   Space,
+  HoverBox,
+  HoverCont,
+  HoverImg,
+  HoverTxt,
+  HoverBoxTranding,
+  HoverContTranding,
+  HoverImgTranding,
+  HoverTxtTranding,
 } from "./Main.styled";
 import { useState } from "react";
 import Input from "../Search/Input";
+import play from "../../assets/icon-play.svg";
 export default function Main(props: any) {
   const [bookmark, setBookmark] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
@@ -64,7 +73,7 @@ export default function Main(props: any) {
                 fixedWidth: 500,
                 autoplay: true,
                 perMove: 1,
-                interval: 3500,
+                interval: 3000,
                 pagination: false,
                 arrows: false,
                 direction: "ltr",
@@ -126,6 +135,11 @@ export default function Main(props: any) {
                               </Info>
                               <TrandingName>{content.title}</TrandingName>
                             </TrandingAbout>
+                            <HoverBoxTranding />
+                            <HoverContTranding>
+                              <HoverImgTranding src={play} />
+                              <HoverTxtTranding>Play</HoverTxtTranding>
+                            </HoverContTranding>
                           </TrandingElement>
                         </SplideSlide>
                       </>
@@ -175,6 +189,11 @@ export default function Main(props: any) {
                       </Info>
                       <Name>{content.title}</Name>
                     </About>
+                    <HoverBox />
+                    <HoverCont>
+                      <HoverImg src={play} />
+                      <HoverTxt>Play</HoverTxt>
+                    </HoverCont>
                   </Box>
                 );
               })}

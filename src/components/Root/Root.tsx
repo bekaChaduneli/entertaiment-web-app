@@ -11,22 +11,70 @@ import avatar from "../../assets/image-avatar.png";
 import { Content, Header, Img, MainBoxs, MainImg, Person } from "./Root.styled";
 import { useState } from "react";
 export default function Roots(props: any) {
+  const [movied, setMovied] = useState("");
+  const [mained, setMained] = useState("");
+  const [seried, setSeried] = useState("");
+  const [bookmarked, setBookmarked] = useState("");
   return (
     <MainBoxs>
       <Header>
         <MainImg src={image} />
         <Content>
           <Link to="/">
-            <Img src={home} />
+            <Img<any>
+              hovered={mained}
+              onClick={() => {
+                setMovied("");
+                setMained(
+                  "brightness(0) saturate(100%) invert(51%) sepia(62%) saturate(2926%) hue-rotate(329deg) brightness(95%) contrast(109%)"
+                );
+                setSeried("");
+                setBookmarked("");
+              }}
+              src={home}
+            />
           </Link>
           <Link to="/movies">
-            <Img src={movie} />
+            <Img<any>
+              hovered={movied}
+              onClick={() => {
+                setMovied(
+                  "brightness(0) saturate(100%) invert(51%) sepia(62%) saturate(2926%) hue-rotate(329deg) brightness(95%) contrast(109%)"
+                );
+                setMained("");
+                setSeried("");
+                setBookmarked("");
+              }}
+              src={movie}
+            />
           </Link>
           <Link to="/series">
-            <Img src={serie} />
+            <Img<any>
+              hovered={seried}
+              onClick={() => {
+                setMovied("");
+                setMained("");
+                setSeried(
+                  "brightness(0) saturate(100%) invert(51%) sepia(62%) saturate(2926%) hue-rotate(329deg) brightness(95%) contrast(109%)"
+                );
+                setBookmarked("");
+              }}
+              src={serie}
+            />
           </Link>
           <Link to="/bookmarks">
-            <Img src={bookmark} />
+            <Img<any>
+              hovered={bookmarked}
+              onClick={() => {
+                setMovied("");
+                setMained("");
+                setSeried("");
+                setBookmarked(
+                  "brightness(0) saturate(100%) invert(51%) sepia(62%) saturate(2926%) hue-rotate(329deg) brightness(95%) contrast(109%)"
+                );
+              }}
+              src={bookmark}
+            />
           </Link>
         </Content>
         <Person src={avatar} />

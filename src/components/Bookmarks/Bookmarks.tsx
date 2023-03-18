@@ -24,16 +24,21 @@ import {
   SearchImg,
   SecondBox,
   Space,
+  HoverBox,
+  HoverCont,
+  HoverImg,
+  HoverTxt,
 } from "./Bookmarks.styled";
 import { useState } from "react";
 import Input from "../Search/Input";
+import play from "../../assets/icon-play.svg";
 export default function Series(props: any) {
   const [bookmark, setBookmark] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   return (
     <MainBox>
       <Input
-        text="Search for TV series"
+        text="Search for bookmarked shows"
         setIsSearching={setIsSearching}
         bookmark
         seriesImg
@@ -99,6 +104,11 @@ export default function Series(props: any) {
                             </Info>
                             <Name>{content.title}</Name>
                           </About>
+                          <HoverBox />
+                          <HoverCont>
+                            <HoverImg src={play} />
+                            <HoverTxt>Play</HoverTxt>
+                          </HoverCont>
                         </Box>
                       </>
                     )}
@@ -154,6 +164,11 @@ export default function Series(props: any) {
                                 </Info>
                                 <Name>{content.title}</Name>
                               </About>
+                              <HoverBox />
+                              <HoverCont>
+                                <HoverImg src={play} />
+                                <HoverTxt>Play</HoverTxt>
+                              </HoverCont>
                             </Box>
                           </>
                         )}

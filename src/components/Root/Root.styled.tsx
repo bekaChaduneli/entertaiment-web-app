@@ -35,9 +35,14 @@ export const MainBoxs = styled.div`
 export const Img = styled.img`
   width: 16px;
   height: 16px;
+  filter: ${(props: any) => props.hovered};
   &:hover {
     filter: brightness(300%);
     transition: 0.5s;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 20px;
+    height: 20px;
   }
 `;
 
@@ -48,6 +53,7 @@ export const Content = styled.div`
   gap: 24px;
   @media screen and (min-width: 1440px) {
     flex-direction: column;
+    transform: translateY(-230px);
   }
 `;
 

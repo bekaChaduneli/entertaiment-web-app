@@ -16,7 +16,6 @@ import {
   Recomendation,
   RecomemendedTxt,
   Recommended,
-  MainBox,
   SearchBox,
   Search,
   SearchImg,

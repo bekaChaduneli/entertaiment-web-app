@@ -19,12 +19,14 @@ import {
   RecomemendedTxt,
   Recommended,
   MainBox,
-  SearchBox,
-  Search,
-  SearchImg,
+  HoverBox,
+  HoverCont,
+  HoverImg,
+  HoverTxt,
 } from "./Series.styled";
 import { useState } from "react";
 import Input from "../Search/Input";
+import play from "../../assets/icon-play.svg";
 export default function Series(props: any) {
   const [bookmark, setBookmark] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
@@ -97,6 +99,11 @@ export default function Series(props: any) {
                             </Info>
                             <Name>{content.title}</Name>
                           </About>
+                          <HoverBox />
+                          <HoverCont>
+                            <HoverImg src={play} />
+                            <HoverTxt>Play</HoverTxt>
+                          </HoverCont>
                         </Box>
                       </>
                     )}

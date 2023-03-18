@@ -5,7 +5,7 @@ export const SearchBox = styled.div`
   flex-direction: row;
   gap: 19px;
   @media screen and (min-width: 1440px) {
-    margin-top: 40px;
+    margin-top: 55px;
   }
 `;
 
@@ -21,6 +21,10 @@ export const Search = styled.input`
 export const SearchImg = styled.img`
   width: 18px;
   height: 18px;
+  @media screen and (min-width: 768px) {
+    width: 24px;
+    height: 24px;
+  }
 `;
 
 export const MainBox = styled.main`
