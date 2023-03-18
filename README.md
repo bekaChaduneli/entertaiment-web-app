@@ -14,7 +14,7 @@
 
 ### Links
 
-- Live Site URL: [Live site](https://planet-facts-reacts.vercel.app/)
+- Live Site URL: [Live site](https://entertaiment-web-app.vercel.app/)
 - Solution URL: [Solution URL](https://github.com/bekaChaduneli/planet-facts-react)
 
 ### Built with

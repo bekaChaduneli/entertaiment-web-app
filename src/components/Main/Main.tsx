@@ -1,7 +1,7 @@
-import BookmarkEmpty from "../../assets/icon-bookmark-empty.svg";
-import BookmarkFull from "../../assets/icon-bookmark-full.svg";
-import movieImg from "../../assets/icon-category-movie.svg";
-import seriesImg from "../../assets/icon-category-tv.svg";
+import BookmarkEmpty from "../../../public/assets/icon-bookmark-empty.svg";
+import BookmarkFull from "../../../public/assets/icon-bookmark-full.svg";
+import movieImg from "../../../public/assets/icon-category-movie.svg";
+import seriesImg from "../../../public/assets/icon-category-tv.svg";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import {
@@ -40,7 +40,7 @@ import {
 } from "./Main.styled";
 import { useState } from "react";
 import Input from "../Search/Input";
-import play from "../../assets/icon-play.svg";
+import play from "../../../public/assets/icon-play.svg";
 export default function Main(props: any) {
   const [bookmark, setBookmark] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
