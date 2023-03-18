@@ -25,7 +25,6 @@ export const Header = styled.div`
 export const MainBoxs = styled.div`
   height: 100%;
   display: flex;
-
   flex-direction: column;
   @media screen and (min-width: 1440px) {
     flex-direction: row;

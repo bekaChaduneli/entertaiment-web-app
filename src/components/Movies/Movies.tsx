@@ -22,6 +22,7 @@ import {
   SearchBox,
   Search,
   SearchImg,
+  Space,
 } from "./Movies.styled";
 import { useState } from "react";
 import Input from "../Search/Input";
@@ -39,7 +40,7 @@ export default function Movies(props: any) {
         setSearchValue
         movieImg
         mainName="Movie"
-        secondName=""
+        secondName="afsafaf"
         BookmarkFull
         BookmarkEmpty
         setBookmark

@@ -4,6 +4,7 @@ export const MainBox = styled.main`
   width: 100%;
   padding: 16px;
   display: flex;
+  margin-bottom: 40px;
   flex-direction: column;
   gap: 24px;
   @media screen and (min-width: 768px) {
@@ -25,6 +26,10 @@ export const Box = styled.div`
   @media screen and (min-width: 1440px) {
     width: 280px;
   }
+`;
+export const Space = styled.div`
+  width: 100%;
+  height: 40px;
 `;
 
 export const Images = styled.img`

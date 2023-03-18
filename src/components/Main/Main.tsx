@@ -28,6 +28,7 @@ import {
   TrandingBookM,
   TrandingName,
   Headline,
+  Space,
 } from "./Main.styled";
 import { useState } from "react";
 import Input from "../Search/Input";
@@ -181,6 +182,7 @@ export default function Main(props: any) {
           </Recomendation>
         </>
       )}
+      <Space>-</Space>
     </MainBox>
   );
 }

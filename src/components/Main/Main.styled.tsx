@@ -14,6 +14,12 @@ export const MainBox = styled.main`
   }
 `;
 
+export const Space = styled.div`
+  width: 100%;
+  height: 40px;
+  opacity: 0%;
+`;
+
 export const Box = styled.div`
   width: 164px;
   display: flex;

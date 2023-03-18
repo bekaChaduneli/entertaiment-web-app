@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const MainBox = styled.main`
   width: 100%;
   padding: 16px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -12,6 +13,11 @@ export const MainBox = styled.main`
   @media screen and (min-width: 1440px) {
     gap: 40px;
   }
+`;
+export const Space = styled.div`
+  width: 100%;
+  height: 40px;
+  opacity: 0%;
 `;
 
 export const Box = styled.div`

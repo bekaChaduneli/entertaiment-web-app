@@ -41,64 +41,74 @@ export default function Series(props: any) {
         BookmarkFull
         BookmarkEmpty
         mainName="TV Series"
-        secondName=""
+        itsBookmarksPage={false}
+        secondName="gagagah"
         setBookmark
         isSearching={isSearching}
         data={props.data}
       />
-      <Recomendation>
-        <RecomemendedTxt>TV Series</RecomemendedTxt>
-        <Recommended>
-          {props.data.map((content: any) => {
-            return (
-              <>
-                {content.category == "TV Series" && (
-                  <>
-                    <Box>
-                      <Images src={content.thumbnail.regular.large} />
 
-                      <Bookmark
-                        onClick={() => {
-                          content.isBookmarked = !content.isBookmarked;
-                          setBookmark(!bookmark);
-                        }}
-                      ></Bookmark>
-                      <BookM
-                        onClick={() => {
-                          content.isBookmarked = !content.isBookmarked;
-                          setBookmark(!bookmark);
-                        }}
-                        src={
-                          content.isBookmarked ? BookmarkFull : BookmarkEmpty
-                        }
-                      />
-                      <About>
-                        <Info>
-                          <Txt>{content.year}</Txt>
-                          <Point>.</Point>
-                          <Type>
-                            <Imgs
-                              src={
-                                content.category === "Movie"
-                                  ? movieImg
-                                  : seriesImg
-                              }
-                            />
-                            <Txt>{content.category}</Txt>
-                          </Type>
-                          <Point>.</Point>
-                          <Txt>{content.rating}</Txt>
-                        </Info>
-                        <Name>{content.title}</Name>
-                      </About>
-                    </Box>
+      {isSearching === false ? (
+        <>
+          <Recomendation>
+            <RecomemendedTxt>TV Series</RecomemendedTxt>
+            <Recommended>
+              {props.data.map((content: any) => {
+                return (
+                  <>
+                    {content.category == "TV Series" && (
+                      <>
+                        <Box>
+                          <Images src={content.thumbnail.regular.large} />
+
+                          <Bookmark
+                            onClick={() => {
+                              content.isBookmarked = !content.isBookmarked;
+                              setBookmark(!bookmark);
+                            }}
+                          ></Bookmark>
+                          <BookM
+                            onClick={() => {
+                              content.isBookmarked = !content.isBookmarked;
+                              setBookmark(!bookmark);
+                            }}
+                            src={
+                              content.isBookmarked
+                                ? BookmarkFull
+                                : BookmarkEmpty
+                            }
+                          />
+                          <About>
+                            <Info>
+                              <Txt>{content.year}</Txt>
+                              <Point>.</Point>
+                              <Type>
+                                <Imgs
+                                  src={
+                                    content.category === "Movie"
+                                      ? movieImg
+                                      : seriesImg
+                                  }
+                                />
+                                <Txt>{content.category}</Txt>
+                              </Type>
+                              <Point>.</Point>
+                              <Txt>{content.rating}</Txt>
+                            </Info>
+                            <Name>{content.title}</Name>
+                          </About>
+                        </Box>
+                      </>
+                    )}
                   </>
-                )}
-              </>
-            );
-          })}
-        </Recommended>
-      </Recomendation>
+                );
+              })}
+            </Recommended>
+          </Recomendation>
+        </>
+      ) : (
+        ""
+      )}
     </MainBox>
   );
 }

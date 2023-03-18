@@ -55,54 +55,53 @@ export default function Input(props: any) {
             </RecomemendedTxt>
             <Recommended>
               {searched.map((content: any) => {
-                console.log(content);
                 return (
                   <>
-                    {content.category == props.mainName ||
-                      (content.category == props.secondName && (
-                        <>
-                          <Box>
-                            <Images src={content.thumbnail.regular.large} />
+                    {(content.category == props.mainName ||
+                      content.category == props.secondName) && (
+                      <>
+                        <Box>
+                          <Images src={content.thumbnail.regular.large} />
 
-                            <Bookmark
-                              onClick={() => {
-                                content.isBookmarked = !content.isBookmarked;
-                                props.setBookmark(!props.bookmark);
-                              }}
-                            ></Bookmark>
-                            <BookM
-                              onClick={() => {
-                                content.isBookmarked = !content.isBookmarked;
-                                props.setBookmark(!props.bookmark);
-                              }}
-                              src={
-                                content.isBookmarked
-                                  ? BookmarkFull
-                                  : BookmarkEmpty
-                              }
-                            />
-                            <About>
-                              <Info>
-                                <Txt>{content.year}</Txt>
-                                <Point>.</Point>
-                                <Type>
-                                  <Imgs
-                                    src={
-                                      content.category === "Movie"
-                                        ? props.movieImg
-                                        : props.seriesImg
-                                    }
-                                  />
-                                  <Txt>{content.category}</Txt>
-                                </Type>
-                                <Point>.</Point>
-                                <Txt>{content.rating}</Txt>
-                              </Info>
-                              <Name>{content.title}</Name>
-                            </About>
-                          </Box>
-                        </>
-                      ))}
+                          <Bookmark
+                            onClick={() => {
+                              content.isBookmarked = !content.isBookmarked;
+                              props.setBookmark(!props.bookmark);
+                            }}
+                          ></Bookmark>
+                          <BookM
+                            onClick={() => {
+                              content.isBookmarked = !content.isBookmarked;
+                              props.setBookmark(!props.bookmark);
+                            }}
+                            src={
+                              content.isBookmarked
+                                ? BookmarkFull
+                                : BookmarkEmpty
+                            }
+                          />
+                          <About>
+                            <Info>
+                              <Txt>{content.year}</Txt>
+                              <Point>.</Point>
+                              <Type>
+                                <Imgs
+                                  src={
+                                    content.category === "Movie"
+                                      ? props.movieImg
+                                      : props.seriesImg
+                                  }
+                                />
+                                <Txt>{content.category}</Txt>
+                              </Type>
+                              <Point>.</Point>
+                              <Txt>{content.rating}</Txt>
+                            </Info>
+                            <Name>{content.title}</Name>
+                          </About>
+                        </Box>
+                      </>
+                    )}
                   </>
                 );
               })}

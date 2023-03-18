@@ -23,134 +23,152 @@ import {
   Search,
   SearchImg,
   SecondBox,
+  Space,
 } from "./Bookmarks.styled";
 import { useState } from "react";
+import Input from "../Search/Input";
 export default function Series(props: any) {
   const [bookmark, setBookmark] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
-  const makeChange = (e: any) => {
-    setSearchValue(e.target.value);
-  };
-  let searched = props.data.filter((movie: any) =>
-    movie.title.toLowerCase().includes(searchValue.toLowerCase())
-  );
+  const [isSearching, setIsSearching] = useState(false);
   return (
     <MainBox>
-      <SearchBox onClick={() => console.log(searched)}>
-        <SearchImg src={search} />
-        <Search
-          type="search"
-          value={searchValue}
-          onChange={makeChange}
-          placeholder="Search for bookmarked shows"
-        />
-      </SearchBox>
-      <Recomendation>
-        <RecomemendedTxt>Bookmarked Movies</RecomemendedTxt>
-        <Recommended>
-          {props.data.map((content: any) => {
-            return (
-              <>
-                {content.category == "Movie" && content.isBookmarked && (
+      <Input
+        text="Search for TV series"
+        setIsSearching={setIsSearching}
+        bookmark
+        seriesImg
+        searchValue
+        setSearchValue
+        movieImg
+        BookmarkFull
+        BookmarkEmpty
+        itsBookmarksPage={true}
+        mainName="TV Series"
+        secondName="Movie"
+        setBookmark
+        isSearching={isSearching}
+        data={props.data}
+      />
+
+      {isSearching === false ? (
+        <>
+          <Recomendation>
+            <RecomemendedTxt>Bookmarked Movies</RecomemendedTxt>
+            <Recommended>
+              {props.data.map((content: any) => {
+                return (
                   <>
-                    <Box>
-                      <Images src={content.thumbnail.regular.large} />
+                    {content.category == "Movie" && content.isBookmarked && (
+                      <>
+                        <Box>
+                          <Images src={content.thumbnail.regular.large} />
 
-                      <Bookmark
-                        onClick={() => {
-                          content.isBookmarked = !content.isBookmarked;
-                          setBookmark(!bookmark);
-                        }}
-                      ></Bookmark>
-                      <BookM
-                        onClick={() => {
-                          content.isBookmarked = !content.isBookmarked;
-                          setBookmark(!bookmark);
-                        }}
-                        src={
-                          content.isBookmarked ? BookmarkFull : BookmarkEmpty
-                        }
-                      />
-                      <About>
-                        <Info>
-                          <Txt>{content.year}</Txt>
-                          <Point>.</Point>
-                          <Type>
-                            <Imgs
-                              src={
-                                content.category === "Movie"
-                                  ? movieImg
-                                  : seriesImg
-                              }
-                            />
-                            <Txt>{content.category}</Txt>
-                          </Type>
-                          <Point>.</Point>
-                          <Txt>{content.rating}</Txt>
-                        </Info>
-                        <Name>{content.title}</Name>
-                      </About>
-                    </Box>
+                          <Bookmark
+                            onClick={() => {
+                              content.isBookmarked = !content.isBookmarked;
+                              setBookmark(!bookmark);
+                            }}
+                          ></Bookmark>
+                          <BookM
+                            onClick={() => {
+                              content.isBookmarked = !content.isBookmarked;
+                              setBookmark(!bookmark);
+                            }}
+                            src={
+                              content.isBookmarked
+                                ? BookmarkFull
+                                : BookmarkEmpty
+                            }
+                          />
+                          <About>
+                            <Info>
+                              <Txt>{content.year}</Txt>
+                              <Point>.</Point>
+                              <Type>
+                                <Imgs
+                                  src={
+                                    content.category === "Movie"
+                                      ? movieImg
+                                      : seriesImg
+                                  }
+                                />
+                                <Txt>{content.category}</Txt>
+                              </Type>
+                              <Point>.</Point>
+                              <Txt>{content.rating}</Txt>
+                            </Info>
+                            <Name>{content.title}</Name>
+                          </About>
+                        </Box>
+                      </>
+                    )}
                   </>
-                )}
-              </>
-            );
-          })}
-        </Recommended>
-        <SecondBox>
-          <RecomemendedTxt>Bookmarked TV Series</RecomemendedTxt>
-          <Recommended>
-            {props.data.map((content: any) => {
-              return (
-                <>
-                  {content.category == "TV Series" && content.isBookmarked && (
+                );
+              })}
+            </Recommended>
+            <SecondBox>
+              <RecomemendedTxt>Bookmarked TV Series</RecomemendedTxt>
+              <Recommended>
+                {props.data.map((content: any) => {
+                  return (
                     <>
-                      <Box>
-                        <Images src={content.thumbnail.regular.large} />
+                      {content.category == "TV Series" &&
+                        content.isBookmarked && (
+                          <>
+                            <Box>
+                              <Images src={content.thumbnail.regular.large} />
 
-                        <Bookmark
-                          onClick={() => {
-                            content.isBookmarked = !content.isBookmarked;
-                            setBookmark(!bookmark);
-                          }}
-                        ></Bookmark>
-                        <BookM
-                          onClick={() => {
-                            content.isBookmarked = !content.isBookmarked;
-                            setBookmark(!bookmark);
-                          }}
-                          src={
-                            content.isBookmarked ? BookmarkFull : BookmarkEmpty
-                          }
-                        />
-                        <About>
-                          <Info>
-                            <Txt>{content.year}</Txt>
-                            <Point>.</Point>
-                            <Type>
-                              <Imgs
+                              <Bookmark
+                                onClick={() => {
+                                  content.isBookmarked = !content.isBookmarked;
+                                  setBookmark(!bookmark);
+                                }}
+                              ></Bookmark>
+                              <BookM
+                                onClick={() => {
+                                  content.isBookmarked = !content.isBookmarked;
+                                  setBookmark(!bookmark);
+                                }}
                                 src={
-                                  content.category === "Movie"
-                                    ? movieImg
-                                    : seriesImg
+                                  content.isBookmarked
+                                    ? BookmarkFull
+                                    : BookmarkEmpty
                                 }
                               />
-                              <Txt>{content.category}</Txt>
-                            </Type>
-                            <Point>.</Point>
-                            <Txt>{content.rating}</Txt>
-                          </Info>
-                          <Name>{content.title}</Name>
-                        </About>
-                      </Box>
+                              <About>
+                                <Info>
+                                  <Txt>{content.year}</Txt>
+                                  <Point>.</Point>
+                                  <Type>
+                                    <Imgs
+                                      src={
+                                        content.category === "Movie"
+                                          ? movieImg
+                                          : seriesImg
+                                      }
+                                    />
+                                    <Txt>{content.category}</Txt>
+                                  </Type>
+                                  <Point>.</Point>
+                                  <Txt>{content.rating}</Txt>
+                                </Info>
+                                <Name>{content.title}</Name>
+                              </About>
+                            </Box>
+                          </>
+                        )}
                     </>
-                  )}
-                </>
-              );
-            })}
-          </Recommended>
-        </SecondBox>
-      </Recomendation>
+                  );
+                })}
+              </Recommended>
+            </SecondBox>
+          </Recomendation>
+        </>
+      ) : (
+        ""
+      )}
+
+      <Space>-</Space>
     </MainBox>
   );
 }
