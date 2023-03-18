@@ -1,7 +1,7 @@
 import BookmarkEmpty from "../../../public/assets/icon-bookmark-empty.svg";
 import BookmarkFull from "../../../public/assets/icon-bookmark-full.svg";
 import movieImg from "../../../public/assets/icon-category-movie.svg";
-import seriesImg from "../../../public/../public/assets/icon-category-tv.svg";
+import seriesImg from "../../../public/assets/icon-category-tv.svg";
 import search from "../../../public/assets/icon-search.svg";
 import {
   Bookmark,
